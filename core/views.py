@@ -6,7 +6,7 @@ from .models import Roomie
 from .serializers import RoomieSerializer 
 
 class RoomieApiView(APIView):
-    permission_classes = [permissions.IsAuthenticated]
+    permission_classes = [permissions.AllowAny]
     
     def get(self, request, *args, **kwargs):
         roomies = Roomie.objects
