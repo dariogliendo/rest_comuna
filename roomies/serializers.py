@@ -3,4 +3,4 @@ from .models import Roomie
 class RoomieSerializer(serializers.ModelSerializer):
     class Meta:
         model = Roomie
-        fields = ['name']
+        fields = ['id', 'name']

@@ -15,10 +15,10 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
-from core import urls as core_urls
+from roomies import urls as roomies_urls
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('API/', include(core_urls)),
+    path('API/', include(roomies_urls)),
     path('api_auth', include('rest_framework.urls'))
 ]

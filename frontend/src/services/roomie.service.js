@@ -7,7 +7,7 @@ const roomieService = {
 
 async function get() {
   try {
-    const { data } = await axiosInstance.get('/API/')
+    const { data } = await axiosInstance.get('/API/roomies')
     return data
   } catch (error) {
     console.error(error)
@@ -15,8 +15,7 @@ async function get() {
 }
 
 async function save(req) {
-  const { data } = await axiosInstance.post('/API/', req)
-  console.log(data)
+  await axiosInstance.post('/API/roomies', req)
 }
 
 export default roomieService

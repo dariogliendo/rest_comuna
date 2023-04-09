@@ -15,13 +15,14 @@ export default function Roomies() {
     try {
       const roomies = await roomieService.get()
       setRoomies(roomies)
+      setNewName('')
       console.log(roomies)
     } catch (error) { console.error(error) }
   }
 
   async function newUser(name) {
     try {
-      roomieService.save({
+      await roomieService.save({
         name: name
       })
       refresh()
